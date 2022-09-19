@@ -1,0 +1,16 @@
+PODS:
+  - CoordinatorLib (1.0.3)
+
+DEPENDENCIES:
+  - CoordinatorLib
+
+SPEC REPOS:
+  trunk:
+    - CoordinatorLib
+
+SPEC CHECKSUMS:
+  CoordinatorLib: 859ca88637e1e9dfb6a3ad3c422e49647b70fc5e
+
+PODFILE CHECKSUM: 7ba35b84f6433b6a3ac79371e35d60c0ff04d008
+
+COCOAPODS: 1.11.3
