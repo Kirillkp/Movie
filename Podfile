@@ -8,5 +8,6 @@ target 'Movie' do
   # Pods for Movie
 
   pod 'CoordinatorLib'
+  pod 'Alamofire'
 
 end

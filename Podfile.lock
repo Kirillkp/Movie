@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (5.6.2)
   - CoordinatorLib (1.0.3)
 
 DEPENDENCIES:
+  - Alamofire
   - CoordinatorLib
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - CoordinatorLib
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CoordinatorLib: 859ca88637e1e9dfb6a3ad3c422e49647b70fc5e
 
-PODFILE CHECKSUM: 7ba35b84f6433b6a3ac79371e35d60c0ff04d008
+PODFILE CHECKSUM: 4d6c53be51a114bfb7e0e2e06857075db8efb6dc
 
 COCOAPODS: 1.11.3
