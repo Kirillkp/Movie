@@ -21,7 +21,7 @@ final class FavoriteViewController: UIViewController, FavoriteModule {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Favorite"
+        navigationItem.title = "Favorite"
         view.backgroundColor = .white
     }
 

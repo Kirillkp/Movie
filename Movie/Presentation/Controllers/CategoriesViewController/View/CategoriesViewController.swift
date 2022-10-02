@@ -21,7 +21,7 @@ final class CategoriesViewController: UIViewController, CategoriesModule {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Categories"
+        navigationItem.title = "Categories"
         view.backgroundColor = .white
     }
 

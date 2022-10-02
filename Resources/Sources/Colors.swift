@@ -14,12 +14,11 @@ public extension UIColor {
     }
     
     /// #3544C4
-    static func selectedTabBarItem(compatibleWith: UITraitCollection? = nil) -> UIColor {
-        .resourceColor(named: "3544C4").withAlphaComponent(1)
-    }
+    static var selectedTabBarItem: UIColor { .init(hex: 0x3544C4) }
     
     /// #D6D6D6
-    static func normalTabBarItem(compatibleWith: UITraitCollection? = nil) -> UIColor {
-        .resourceColor(named: "D6D6D6").withAlphaComponent(1)
-    }
+    static var normalTabBarItem: UIColor { .init(hex: 0xD6D6D6) }
+    
+    /// #F5F6F7
+    static var backgroundTabBar: UIColor { .init(hex: 0xF5F6F7) }
 }

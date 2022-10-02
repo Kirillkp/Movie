@@ -49,6 +49,7 @@
 		8AE57D9728E709AF002DB81A /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE57D9628E709AF002DB81A /* Country.swift */; };
 		8AE57D9928E709E0002DB81A /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE57D9828E709E0002DB81A /* Genre.swift */; };
 		8AE57D9B28E70A28002DB81A /* FilmId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE57D9A28E70A28002DB81A /* FilmId.swift */; };
+		8AE57D9E28E9909B002DB81A /* SettingsLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE57D9D28E9909B002DB81A /* SettingsLayer.swift */; };
 		B10D6AEE5CCA8C2EB5433B57 /* Pods_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE25C96C8151953D5E34F603 /* Pods_Movie.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		8AE57D9628E709AF002DB81A /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		8AE57D9828E709E0002DB81A /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		8AE57D9A28E70A28002DB81A /* FilmId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmId.swift; sourceTree = "<group>"; };
+		8AE57D9D28E9909B002DB81A /* SettingsLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLayer.swift; sourceTree = "<group>"; };
 		AE25C96C8151953D5E34F603 /* Pods_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 		8AAED8B828DCE69E00EE0FB6 /* Business Logic */ = {
 			isa = PBXGroup;
 			children = (
+				8AE57D9C28E9907C002DB81A /* SettingsLayer */,
 				8AAED8BB28DDCFDF00EE0FB6 /* NetworkLayer */,
 				8AAED8B928DCE6BD00EE0FB6 /* ServiceLayer.swift */,
 			);
@@ -305,9 +308,9 @@
 		8AB3D92328D3AD9100F1E645 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				8AB3D93B28D3B73F00F1E645 /* Application */,
 				8AAED8B828DCE69E00EE0FB6 /* Business Logic */,
 				8AB3D94728D3CFA800F1E645 /* Extensions */,
-				8AB3D93B28D3B73F00F1E645 /* Application */,
 				8AB3D93A28D3B73300F1E645 /* Presentation */,
 				8AB3D95B28D3D87200F1E645 /* Resources */,
 				8AB3D93228D3AD9200F1E645 /* Info.plist */,
@@ -497,6 +500,14 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		8AE57D9C28E9907C002DB81A /* SettingsLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8AE57D9D28E9909B002DB81A /* SettingsLayer.swift */,
+			);
+			path = SettingsLayer;
+			sourceTree = "<group>";
+		};
 		93AD95B3616DEF683ABBEE46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,6 +660,7 @@
 				8AE57D9B28E70A28002DB81A /* FilmId.swift in Sources */,
 				8AE57D8F28E703D9002DB81A /* Result.swift in Sources */,
 				8AB3D96728D3DBEB00F1E645 /* ModuleFactory+TabBarModule.swift in Sources */,
+				8AE57D9E28E9909B002DB81A /* SettingsLayer.swift in Sources */,
 				8AAED8A128D89D8500EE0FB6 /* CategoriesViewModel.swift in Sources */,
 				8AAED89928D89C5B00EE0FB6 /* MainViewModel.swift in Sources */,
 				8AAED89F28D89D4700EE0FB6 /* CategoriesViewController.swift in Sources */,

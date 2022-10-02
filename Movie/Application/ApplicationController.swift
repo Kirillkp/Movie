@@ -30,7 +30,7 @@ enum ApplicationController {
     private static func setRootViewController(_ viewController: UIViewController, animated: Bool) {
         let appWindow = AppDelegate.shared.appWindow
 
-        guard appWindow.rootViewController != nil else {
+        if appWindow.rootViewController != nil {
             return
         }
 

@@ -37,11 +37,10 @@ public extension UIImage {
     }
     
     static func favoritesTabBarIcon(compatibleWith: UITraitCollection? = nil) -> UIImage {
-        systemIcon(named: "heart.fill")
+        resourceImage(named: "favorites_tab_bar_item", compatibleWith: compatibleWith)
     }
     
     static func categoriesTabBarIcon(compatibleWith: UITraitCollection? = nil) -> UIImage {
-        systemIcon(named: "list.bullet")
+        resourceImage(named: "categories_tab_bar_item", compatibleWith: compatibleWith)
     }
-    
 }

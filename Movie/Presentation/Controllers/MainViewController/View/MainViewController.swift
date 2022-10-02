@@ -21,7 +21,8 @@ final class MainViewController: UIViewController, MainModule {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Main"
+        navigationItem.title = "Main"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
     }
 
