@@ -17,11 +17,30 @@ final class MainViewModel {
         self.filmsService = filmsService
     }
     
+    func viewDidLoad() {
+        obtainFilm(order: .rating, type: .film, yearFrom: 2022, page: 1)
+    }
+    
     func obtainFilmId(with id: String) {
         filmsService.obtainFilmId(with: id) { result in
             switch result {
             case .success(let success):
                 print(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
+    
+    func obtainFilm(order: Order,
+                    type: TypeFilm,
+                    yearFrom: Int,
+                    page: Int) {
+        filmsService.obtainFilm(order: order, type: type, yearFrom: yearFrom, page: page) { [weak self] result in
+            switch result {
+            case .success(let success):
+                guard let data = success.items else { return }
+                self?.view?.showFilm(with: data)
             case .failure(let failure):
                 print(failure)
             }

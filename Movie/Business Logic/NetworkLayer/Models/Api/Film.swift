@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FilmId: Codable {
+struct Film: Codable {
 
     /// id фильма кинопоиска
     let kinopoiskId: Int?
@@ -74,7 +74,7 @@ struct FilmId: Codable {
     /// Количество рейтинговой критики
     let ratingRfCriticsVoteCount: Int?
 
-    /// WebUrl
+    /// Ссылка на kinopoisk
     let webUrl: String?
 
     /// Год выпуска

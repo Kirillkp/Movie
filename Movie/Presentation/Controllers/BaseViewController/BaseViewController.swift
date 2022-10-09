@@ -8,17 +8,28 @@
 import Foundation
 import UIKit
 
-class BaseViewController: UIViewController, InitializableViewProtocol {
+class BaseViewController<ViewModel>: UIViewController, InitializableViewProtocol {
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        initializeView()
+    let viewModel: ViewModel
+    
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+
+        super.init(nibName: nil, bundle: nil)
     }
     
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+
+        onViewDidLoad()
+    }
+
+    open func onViewDidLoad() {
+        initializeView()
     }
     
     // MARK: - InitializableView

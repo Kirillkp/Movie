@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-class BaseTableView: UITableView, InitializableViewProtocol {
+class BaseCollectionView: UICollectionView, InitializableViewProtocol {
     
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
         
         initializeView()
     }

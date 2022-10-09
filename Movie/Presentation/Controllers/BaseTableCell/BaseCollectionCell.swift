@@ -7,10 +7,11 @@
 
 import UIKit
 
-class BaseTableCell: UITableViewCell, InitializableViewProtocol {
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: reuseIdentifier)
-
+class BaseCollectionCell: UICollectionViewCell, InitializableViewProtocol {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
         initializeView()
     }
 
@@ -34,8 +35,7 @@ class BaseTableCell: UITableViewCell, InitializableViewProtocol {
     }
 
     func configureAppearance() {
-        selectionStyle = .none
-        backgroundColor = .clear
+        // empty for subclasses overriding
     }
 
     func localize() {

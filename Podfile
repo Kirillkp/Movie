@@ -9,5 +9,7 @@ target 'Movie' do
 
   pod 'CoordinatorLib'
   pod 'Alamofire'
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'SDWebImage', '~> 5.0'
 
 end

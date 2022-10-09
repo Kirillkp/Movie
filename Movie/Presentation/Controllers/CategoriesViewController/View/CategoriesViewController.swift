@@ -24,7 +24,7 @@ final class CategoriesViewController: UIViewController, CategoriesModule {
         navigationItem.title = "Categories"
         view.backgroundColor = .white
     }
-
+    
 }
 
 extension CategoriesViewController: CategoriesModuleInput {

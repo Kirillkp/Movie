@@ -43,4 +43,10 @@ public extension UIImage {
     static func categoriesTabBarIcon(compatibleWith: UITraitCollection? = nil) -> UIImage {
         resourceImage(named: "categories_tab_bar_item", compatibleWith: compatibleWith)
     }
+    
+    // MARK: - MainCollectionCell
+    
+    static func collectionCellRatingStarItem(compatibleWith: UITraitCollection? = nil) -> UIImage {
+        resourceImage(named: "collection_cell_rating_star_item", compatibleWith: compatibleWith)
+    }
 }

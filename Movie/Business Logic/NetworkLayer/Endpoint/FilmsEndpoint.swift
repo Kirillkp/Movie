@@ -11,11 +11,17 @@ enum FilmsEndpoint: URLRequestBuilder {
     
     /// Получить данные о фильме через id
     case obtainFilmId(id: String)
+    case obtainFilm(order: Order,
+                    type: TypeFilm,
+                    yearFrom: Int,
+                    page: Int)
     
     var path: String {
         switch self {
         case .obtainFilmId(let id):
             return "/v2.2/films/\(id)"
+        case .obtainFilm:
+            return "/v2.2/films"
         }
     }
     
@@ -28,6 +34,11 @@ enum FilmsEndpoint: URLRequestBuilder {
     
     var parameters: Parameters? {
         switch self {
+        case.obtainFilm(let order, let type, let yearFrom, let page):
+            return ["order" : order.rawValue,
+                    "type" : type.rawValue,
+                    "yearFrom" : yearFrom,
+                    "page" : page]
         default:
             return nil
         }
@@ -36,6 +47,8 @@ enum FilmsEndpoint: URLRequestBuilder {
     var method: HTTPMethod {
         switch self {
         case .obtainFilmId:
+            return .get
+        case .obtainFilm:
             return .get
         }
     }

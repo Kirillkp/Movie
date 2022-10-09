@@ -17,7 +17,18 @@ final class FilmsServiceImpl: FilmsService {
     
     /// Получить данные о фильме через id
     func obtainFilmId(with id: String, completion: @escaping FilmIdHandler) {
-        serviceProvider.request(service: .obtainFilmId(id: id), decodeType: FilmId.self) {
+        serviceProvider.request(service: .obtainFilmId(id: id), decodeType: Film.self) {
+            completion($0)
+        }
+    }
+    
+    /// Получить данные о фильме
+    func obtainFilm(order: Order,
+                    type: TypeFilm,
+                    yearFrom: Int,
+                    page: Int,
+                    completion: @escaping FilmHandler) {
+        serviceProvider.request(service: .obtainFilm(order: order, type: type, yearFrom: yearFrom, page: page), decodeType: Films.self) {
             completion($0)
         }
     }

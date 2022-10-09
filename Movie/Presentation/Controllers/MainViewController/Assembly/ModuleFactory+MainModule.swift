@@ -10,8 +10,8 @@ import Foundation
 extension ModuleFactory {
 
     func createMainModule() -> MainModule {
-        let controller = MainViewController()
         let viewModel = MainViewModel()
+        let controller = MainViewController(viewModel: viewModel)
         viewModel.view = controller
         return controller
     }
