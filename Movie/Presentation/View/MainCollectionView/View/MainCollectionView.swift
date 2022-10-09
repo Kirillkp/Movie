@@ -14,6 +14,8 @@ final class MainCollectionView: BaseCollectionView {
     private let sizeForItem: CGSize
     private var filmData: [Film]? = nil
     
+    var backgroundFilm: ((String?) -> Void)? = nil
+    
     init(sizeForItem: CGSize) {
         self.sizeForItem = sizeForItem
         
@@ -71,12 +73,18 @@ extension MainCollectionView: UICollectionViewDelegateFlowLayout {
 extension MainCollectionView: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        scrollToVisibleCollectionViewCell()
+        scrollToVisibleCollectionViewCell(with: { [weak self] index in
+            let backgroundFilm = self?.filmData?[index].posterUrlPreview
+            self?.backgroundFilm?(backgroundFilm)
+        })
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
-            scrollToVisibleCollectionViewCell()
+            scrollToVisibleCollectionViewCell(with: { [weak self] index in
+                let backgroundFilm = self?.filmData?[index].posterUrlPreview
+                self?.backgroundFilm?(backgroundFilm)
+            })
         }
     }
 }

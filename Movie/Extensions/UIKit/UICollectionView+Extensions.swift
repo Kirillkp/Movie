@@ -9,7 +9,7 @@ import UIKit
 
 extension UICollectionView {
     
-    func scrollToVisibleCollectionViewCell() {
+    func scrollToVisibleCollectionViewCell(with index: @escaping (Int) -> Void) {
         decelerationRate = UIScrollView.DecelerationRate.normal
         let visibleCenterPositionOfScrollView = Float(contentOffset.x + (bounds.size.width / 2))
         var closestCellIndex = -1
@@ -27,6 +27,7 @@ extension UICollectionView {
         }
         if closestCellIndex != -1 {
             scrollToItem(at: IndexPath(row: closestCellIndex, section: 0), at: .centeredHorizontally, animated: true)
+            index(closestCellIndex)
         }
     }
 }

@@ -19,6 +19,7 @@ protocol MainModuleInput {
 final class MainViewController: BaseViewController<MainViewModel>, MainModule {
 
     private let posterTableView = MainCollectionView(sizeForItem: CGSize(width: .mainTableViewWidth, height: .mainTableViewHeight))
+    private let backgroundImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +33,16 @@ final class MainViewController: BaseViewController<MainViewModel>, MainModule {
     override func addViews() {
         super.addViews()
         
-        view.addSubview(posterTableView)
+        view.addSubviews(backgroundImage,
+                         posterTableView)
     }
     
     override func configureLayout() {
         super.configureLayout()
+        
+        backgroundImage.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
         
         posterTableView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -48,6 +54,19 @@ final class MainViewController: BaseViewController<MainViewModel>, MainModule {
     override func configureAppearance() {
         super.configureAppearance()
         
+        posterTableView.backgroundColor = .clear
+        
+        backgroundImage.contentMode = .scaleAspectFill
+        backgroundImage.applyBlurEffect()
+        backgroundImage.image = .mainBackgroundImage()
+    }
+    
+    override func bindViews() {
+        super.bindViews()
+        
+        posterTableView.backgroundFilm = { [weak self] in
+            self?.backgroundImage.sd_setImage(with: URL(string: $0 ?? ""))
+        }
     }
     
 }

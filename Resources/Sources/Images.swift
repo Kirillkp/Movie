@@ -44,9 +44,13 @@ public extension UIImage {
         resourceImage(named: "categories_tab_bar_item", compatibleWith: compatibleWith)
     }
     
-    // MARK: - MainCollectionCell
+    // MARK: - MainController
     
     static func collectionCellRatingStarItem(compatibleWith: UITraitCollection? = nil) -> UIImage {
         resourceImage(named: "collection_cell_rating_star_item", compatibleWith: compatibleWith)
+    }
+    
+    static func mainBackgroundImage(compatibleWith: UITraitCollection? = nil) -> UIImage {
+        resourceImage(named: "main_background_image", compatibleWith: compatibleWith)
     }
 }

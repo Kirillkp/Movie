@@ -14,6 +14,7 @@
 		8A4E83DD28F1B3ED00EC9285 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E83DC28F1B3ED00EC9285 /* Order.swift */; };
 		8A4E83DF28F1B48600EC9285 /* TypeFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E83DE28F1B48600EC9285 /* TypeFilm.swift */; };
 		8A4E83E228F1E9E300EC9285 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E83E128F1E9E300EC9285 /* Films.swift */; };
+		8A4E83E428F3059400EC9285 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4E83E328F3059400EC9285 /* UIImageView+Extensions.swift */; };
 		8A8F772D28D74123003D1F17 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F772C28D74123003D1F17 /* CoordinatorFactory.swift */; };
 		8A8F773028D74160003D1F17 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8F772F28D74160003D1F17 /* TabBarCoordinator.swift */; };
 		8AAED89028D855AE00EE0FB6 /* CoordinatorFactory+MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAED88F28D855AE00EE0FB6 /* CoordinatorFactory+MainCoordinator.swift */; };
@@ -76,6 +77,7 @@
 		8A4E83DC28F1B3ED00EC9285 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		8A4E83DE28F1B48600EC9285 /* TypeFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFilm.swift; sourceTree = "<group>"; };
 		8A4E83E128F1E9E300EC9285 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		8A4E83E328F3059400EC9285 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		8A8F772C28D74123003D1F17 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		8A8F772F28D74160003D1F17 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		8AAED88F28D855AE00EE0FB6 /* CoordinatorFactory+MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoordinatorFactory+MainCoordinator.swift"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				8AAED89128D8633300EE0FB6 /* Window+Extensions.swift */,
 				8AE57DB828EA2998002DB81A /* UIView+Extensions.swift */,
 				8A4E83D328F19FD200EC9285 /* UICollectionView+Extensions.swift */,
+				8A4E83E328F3059400EC9285 /* UIImageView+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -564,18 +567,18 @@
 		8AE57D9F28E9FAAC002DB81A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8AE57DA728EA20F7002DB81A /* TableCellView */,
-				8AE57DA228EA1FA4002DB81A /* TableListView */,
+				8AE57DA728EA20F7002DB81A /* MainСollectionCellView */,
+				8AE57DA228EA1FA4002DB81A /* MainCollectionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		8AE57DA228EA1FA4002DB81A /* TableListView */ = {
+		8AE57DA228EA1FA4002DB81A /* MainCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				8AE57DA328EA1FAF002DB81A /* View */,
 			);
-			path = TableListView;
+			path = MainCollectionView;
 			sourceTree = "<group>";
 		};
 		8AE57DA328EA1FAF002DB81A /* View */ = {
@@ -586,13 +589,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		8AE57DA728EA20F7002DB81A /* TableCellView */ = {
+		8AE57DA728EA20F7002DB81A /* MainСollectionCellView */ = {
 			isa = PBXGroup;
 			children = (
 				8A4E83D728F1A27400EC9285 /* View */,
 				8A4E83D828F1A27D00EC9285 /* ViewModel */,
 			);
-			path = TableCellView;
+			path = "MainСollectionCellView";
 			sourceTree = "<group>";
 		};
 		8AE57DAC28EA235D002DB81A /* Protocol */ = {
@@ -781,6 +784,7 @@
 				8AB3D92528D3AD9100F1E645 /* AppDelegate.swift in Sources */,
 				8AB3D93928D3B24600F1E645 /* ApplicationController.swift in Sources */,
 				8AE57DB128EA241B002DB81A /* BaseCollectionCell.swift in Sources */,
+				8A4E83E428F3059400EC9285 /* UIImageView+Extensions.swift in Sources */,
 				8AB3D95028D3D0AD00F1E645 /* Images.swift in Sources */,
 				8AAED8B228D89F2000EE0FB6 /* CoordinatorFactory+CategoriesCoordinator.swift in Sources */,
 				8A8F773028D74160003D1F17 /* TabBarCoordinator.swift in Sources */,
@@ -962,6 +966,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -990,6 +995,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
