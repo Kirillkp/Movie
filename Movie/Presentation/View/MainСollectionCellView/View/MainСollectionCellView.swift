@@ -55,7 +55,7 @@ final class MainСollectionCellView: BaseCollectionCell {
     override func configureAppearance() {
         super.configureAppearance()
         
-        posterView.backgroundColor = .red
+        posterView.backgroundColor = .gray
         posterView.layer.cornerRadius = .bigCornerRadius
         posterView.contentMode = .scaleAspectFill
         posterView.clipsToBounds = true
