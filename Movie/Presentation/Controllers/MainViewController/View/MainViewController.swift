@@ -59,6 +59,8 @@ final class MainViewController: BaseViewController<MainViewModel>, MainModule {
         backgroundImage.contentMode = .scaleAspectFill
         backgroundImage.applyBlurEffect()
         backgroundImage.image = .mainBackgroundImage()
+        
+        print("My first commit")
     }
     
     override func bindViews() {
